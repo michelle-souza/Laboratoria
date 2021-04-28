@@ -1,10 +1,7 @@
 let nome = prompt('Bem-Vindo(a)! \n Qual é o seu nome?')
 let participar = prompt(nome + ', deseja participar do nosso quiz? \n 1. Sim \n 2. Não')
 document.getElementById('parabens');
-document.write(nome)
-
-let idParabens = document.getElementById('nome')
-let printa
+document.write('Parabéns!' + nome)
 
 
 if (participar == 1) {
