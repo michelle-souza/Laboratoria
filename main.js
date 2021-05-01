@@ -1,7 +1,5 @@
 let nome = prompt('Bem-Vindo(a)! \n Qual é o seu nome?')
 let participar = prompt(nome + ', deseja participar do nosso quiz? \n 1. Sim \n 2. Não')
-document.getElementById('parabens');
-document.write('Parabéns!' + nome)
 
 
 if (participar == 1) {
@@ -11,30 +9,33 @@ let perguntaDois = prompt('Pergunta número dois: \n - Qual material é extraíd
 let perguntaTres = prompt('Pergunta numero três: \n - Qual é a capital dos Estados Unidos? \n 1. Nova York \n 2. California \n 3. Washington')
 
     if (perguntaUm == 1) {
-        document.getElementById('corretas');
-        document.write('Resposta Correta')
+        let perguntaUmCorreta = document.getElementById('correta1');
+        perguntaUmCorreta.innerHTML = 'Resposta 1 Correta'
         } else {
-        document.getElementById('incorretas');
-        document.write('Resposta Incorreta')
+        let perguntaUmIncorreta = document.getElementById('errada1');
+        perguntaUmIncorreta.innerHTML = 'Resposta 1 Incorreta'
         }
         
     if (perguntaDois == 3) {
-        document.getElementById('corretas');
-        document.write('Resposta Correta')
+        let perguntaDoisCorreta = document.getElementById('correta2');
+        perguntaDoisCorreta.innerHTML = 'Resposta 2 Correta'
         } else {
-        document.getElementById('incorretas');
-        document.write('Resposta Incorreta')
+        let perguntaDoisIncorreta = document.getElementById('errada2');
+        perguntaDoisIncorreta.innerHTML = 'Resposta 2 Incorreta'
         }
     if (perguntaTres == 3) {
-        document.getElementById('corretas');
-        document.write('Resposta Correta')
+        let perguntaTresCorreta = document.getElementById('correta3');
+        perguntaTresCorreta.innerHTML = 'Resposta 3 Correta'
         } else {
-        document.getElementById('incorretas');
-        document.write('Resposta Incorreta')
-        }           
+        let perguntaTresIncorreta = document.getElementById('errada3');
+        perguntaTresIncorreta.innerHTML = 'Resposta 3 Incorreta'
+            
+        let idBemVinda = document.getElementById('parabens');
+            idBemVinda.innerHTML = 'Parabéns ' + nome + ' !'
+    }           
     
 } else if (participar == 2) {
-   alert (nome + ' ,tchauzinho!');   
+   alert (nome + ' , tchauzinho!');   
 } 
 
 
